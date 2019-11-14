@@ -1,0 +1,120 @@
+
+<div class="rightcontent">
+    <div class="tablelist">
+        <d-tabs [(activeTab)]="tab22acticeID" [type]="'tabs'">
+            <d-tab id="tab1" title="项目成员" tabId="tab1"> 
+                <ng-template dTabContent>
+                 
+                  <div class="searchcontent">
+                    <d-search [placeholder]="'请输入关键字，按enter键搜索'" [isKeyupSearch]="true" (searchFn)="onSearch($event)"></d-search>
+                    <div class="searchinfo">
+                      <i class="icon-add-member"></i>
+                      <p (click)="openModal()">添加成员</p>
+                      <i class="icon-qrcode"></i>
+                      <p>通过链接邀请</p>
+                      <i class="icon-help"></i>
+                      <p>角色权限说明</p>
+                    </div>
+                  </div>
+
+                  <div class="tablecontent">
+                      <d-data-table
+                      [checkable]="true"
+                      [dataSource]="basicDataSource"
+                      [scrollable]="true"
+                      [type]="'striped'"
+                    >
+                      <!-- <d-column
+                        *ngFor="let colOption of dataTableOptions.columns"
+                        [field]="colOption.field"
+                        [header]="colOption.header"
+                        [fieldType]="colOption.fieldType"
+                        [width]="'100px'"
+                      >
+                      </d-column> -->
+                    <d-column
+                      field="firstName"
+                      header="用户名称"
+                    ></d-column>
+                    <d-column
+                      field="lastName"
+                      header="昵称"
+                    ></d-column>
+                    <d-column
+                      field="gender"
+                      header="用户标签"
+                    ></d-column>
+                    <d-column
+                      field="dob"
+                      header="企业用户"
+                    ></d-column>
+                    <d-column
+                      field="role"
+                      header="项目角色"
+                    ></d-column>
+                    <d-column
+                      field="account"
+                      header="账号体系"
+                    ></d-column>
+                    <d-column
+                      field="isdisabled"
+                      header="是否禁用"
+                    ></d-column>
+                    <d-column
+                      field="action"
+                      header="操作"
+                    >
+                    <d-cell>
+                      <ng-template let-rowIndex="rowIndex" let-rowItem="rowItem">
+                        <div style="display: flex;">
+                        <div class="icon-edit">
+                        </div>
+                        <div *ngIf="rowIndex !== 0" class="icon-delete">
+                        </div>
+                       </div>
+
+                      </ng-template>
+                    </d-cell>
+                    </d-column>
+                    </d-data-table>
+
+                    
+<!-- 分页 -->
+                    <div class="pagestyle">
+                        <d-pagination
+                        [total]="pager3.total"
+                        [(pageSize)]="pager3.pageSize"
+                        [totalItemText]="'总条数'"
+                        [(pageIndex)]="pager3.pageIndex"
+                        [canViewTotal]="true"
+                        [canChangePageSize]="true"
+                        [lite]="true"
+                        [haveConfigMenu]="true"
+                        >
+                        <div class="pagination-config-item">
+                          <div class="config-item-title">显示字段</div>
+                          <div class="config-item-words">点击设置</div>
+                        </div>
+                        <div class="pagination-config-item">
+                          <div class="config-item-title">显示方式</div>
+                          <div style="padding-left:10px;margin-top:4px">
+                            <i class="icon-list-view"></i>
+                            <i class="icon-veIcon-briefcase"></i>
+                          </div>
+                        </div>
+                        </d-pagination>
+                    </div>
+
+                  </div>
+                </ng-template>
+            </d-tab>
+
+            
+            <d-tab id="tab2" title="待审核" tabId="tab2"> 
+                <ng-template dTabContent>
+                </ng-template>             
+              
+            </d-tab>
+        </d-tabs>
+    </div>
+  </div>

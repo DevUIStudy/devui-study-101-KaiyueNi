@@ -1,0 +1,60 @@
+html,body{
+  height: 100%;
+}
+body {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  }
+
+#mycontent{
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.leftnav{
+    width: 15%;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+    min-height: 92vh;
+
+}
+.clearfix:after{
+content: ' ';
+display: block;
+height: 0;
+clear: both; 
+}
+  
+.clearfix{
+  zoom:1;
+  }
+
+/* 组件样式 */
+/* 手风琴 */
+.menu {
+    width: 100%;
+    height: 100%;
+  }
+.option {
+    line-height: 20px;
+    vertical-align: middle;
+    margin-top: 20px;
+  }
+.option > d-toggle {
+    display: inline-block;
+    transform: translateY(3px);
+  }
+:host ::ng-deep .devui-accordion-menu{
+    height: 100%;
+  }
+  @media (max-width: 250px) {
+    .menu {
+      width: 80%;
+    }
+  }
+  :host ::ng-deep .devui-accordion-menu{
+    box-shadow: none;
+  }
