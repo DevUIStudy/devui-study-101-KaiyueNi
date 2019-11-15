@@ -109,6 +109,39 @@ export class FilesComponent implements OnInit {
       role:'参与者',
       account:'华为云',
       isdisabled:'否'
+    },
+    {
+      id: 6,
+      firstName: 'po',
+      lastName: 'lang',
+      gender: '',
+      dob: 'china',
+      description: 'lang is here',
+      role:'参与者',
+      account:'华为云',
+      isdisabled:'否'
+    },
+    {
+      id: 7,
+      firstName: 'po',
+      lastName: 'lang',
+      gender: '',
+      dob: 'china',
+      description: 'lang is here',
+      role:'参与者',
+      account:'华为云',
+      isdisabled:'否'
+    },   
+    {
+      id: 8,
+      firstName: 'po',
+      lastName: 'lang',
+      gender: '',
+      dob: 'china',
+      description: 'lang is here',
+      role:'参与者',
+      account:'华为云',
+      isdisabled:'否'
     }
 
 

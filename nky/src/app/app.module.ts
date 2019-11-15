@@ -5,30 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
-import { FilesComponent } from './admin/files/files.component';
+import { FilesComponent } from './files/files.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-const routes: Routes = [  
-  { 
-    path: 'admin', component: AdminComponent,
-    
-    children:[
-      
-      { path: 'files', component: FilesComponent },
-      { path:'**', redirectTo:'files' }
-
-    ] 
-  },
-  { 
-    path:'', redirectTo: 'admin',pathMatch:'full'
-
-  },
-  { 
-    path:'**', component:PageNotFoundComponent
-
-  }
-
-];
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -43,7 +22,7 @@ const routes: Routes = [
     DevUIModule,
     RouterModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
     ],
   providers: [],
   bootstrap: [AppComponent]
